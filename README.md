@@ -33,3 +33,30 @@ current server would open a connection on port 80 and listen on it. client conne
 
 just the first test to make sure i understand how the sockets work and how to handle the error printing 
 
+## telnet_server.c
+
+a test program that will return hello world if connected with telnet 
+
+sample of telnet_server
+
+```
+./telnet_server 
+```
+
+```
+server: waiting for connections...
+server: got connection from ::1
+```
+
+sample of the telnet client connection and output 
+
+```
+telnet localhost 3490
+```
+
+```
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+Hello World!Connection closed by foreign host.
+```
