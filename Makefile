@@ -1,4 +1,4 @@
-all: server client showip telnet_server
+all: server client showip telnet_server telnet_client
 
 server: server.c
 	gcc server.c -o server
@@ -12,5 +12,8 @@ showip: showip.c
 telnet_server: telnet_server.c
 	gcc telnet_server.c -o telnet_server
 
+telnet_client: telnet_client.c
+	gcc telnet_client.c -o telnet_client
+
 clean: 
-	rm -rf *.o showip server client
+	rm -rf *.o showip server client telnet_server telnet_client

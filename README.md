@@ -33,9 +33,9 @@ current server would open a connection on port 80 and listen on it. client conne
 
 just the first test to make sure i understand how the sockets work and how to handle the error printing 
 
-## telnet_server.c
+## telnet_server.c and telnet_client.c
 
-a test program that will return hello world if connected with telnet 
+a test program that sends a `Hello World` if a client tries connecting to the server
 
 sample of telnet_server
 
@@ -49,6 +49,17 @@ server: got connection from ::1
 ```
 
 sample of the telnet client connection and output 
+
+```
+./telnet_client localhost
+```
+
+```
+client: connecting to ::1
+client: recieved 'Hello World!'
+```
+
+you can also connect with just telnet given a port number and ip
 
 ```
 telnet localhost 3490
